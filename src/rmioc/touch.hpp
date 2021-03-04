@@ -44,13 +44,13 @@ public:
         int x;
 
         static constexpr int x_min = 0;
-        static constexpr int x_max = 767;
+        static constexpr int x_max = 1404;
 
         /** Vertical position of the touch point. */
         int y;
 
         static constexpr int y_min = 0;
-        static constexpr int y_max = 1023;
+        static constexpr int y_max = 1872;
 
         /** Amount of pressure applied on the touch point. */
         int pressure;
