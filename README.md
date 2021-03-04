@@ -29,7 +29,7 @@ This VNC client is compatible with VNC servers that are capable of sending pixel
 It has successfully been tested with [x11vnc](https://github.com/LibVNC/x11vnc).
 When trying to connect to an incompatible server, the program will report details of the problem then exit.
 
-## Setup as a second screen
+## Setup as a Second Screen
 
 Although this client can connect to any compatible VNC server, the most common scenario is using the tablet as a second screen for the computer it is attached to.
 For this scenario, you will need to configure your system to create a virtual second screen and then start a VNC server on your computer that the tablet can connect to.
@@ -37,23 +37,22 @@ For this scenario, you will need to configure your system to create a virtual se
 The details are specific to the operating system you’re using:
 
 * [Linux with X11](docs/second-screen/linux-x11.md)
-* Linux with Wayland (Help wanted!)
+* [Linux with Sway](docs/second-screen/linux-sway.md)
 * macOS (Help wanted!)
 * Windows (Help wanted!)
 
-## Using the client
+## Using the Client
 
 You can quit VNSee at any time using the “Power” button (the one above the screen).
 Activity on the touchscreen will be translated to mouse interactions following the mapping in the table below.
 
 <table>
 <tr>
-<th colspan="4">
+<th colspan="3">
     Interactions
 </th>
 </tr>
 <tr>
-    <th>Touch<br>screen</th>
     <td align="center">
         <img src="media/tap.svg" width="200" alt=""><br>
         <strong>Tap</strong> → Left click<br>
@@ -71,23 +70,20 @@ Activity on the touchscreen will be translated to mouse interactions following t
     </td>
 </tr>
 <tr>
-    <th>Buttons</th>
     <td align="center">
-        <img src="media/home.svg" width="200" alt=""><br>
+        <img src="media/button-home.svg" width="200" alt=""><br>
         <strong>Home button</strong><br>
         Force refresh
     </td>
     <td align="center">
-        <img src="media/power.svg" width="200" alt=""><br>
+        <img src="media/button-power.svg" width="200" alt=""><br>
         <strong>Power button</strong><br>
         Quit app
     </td>
-    <td></td>
-</tr>
-<tr>
-    <th>Pen</th>
     <td align="center" colspan="3">
-        Pen input will be converted to mouse click and drag.
+        <img src="media/pen.svg" width="200" alt=""><br>
+        <strong>Draw with pen</strong><br>
+        Mouse click and drag
     </td>
 </tr>
 </table>
@@ -109,6 +105,8 @@ Many thanks to:
 - The [Discord developer community](https://discord.gg/JSSGnFY) for providing initial feedback and testing.
 - [Florian Magin](https://github.com/fmagin) for contributing a driver-generic way of setting up Linux/X11 systems.
 - [@asmanur](https://github.com/asmanur) for improving the repaint latency.
+- [@mhhf](https://github.com/mhhf) for helping with TigerVNC compatibility.
+- [@rowancallahan](https://github.com/rowancallahan) and [@Axenntio](https://github.com/Axenntio) for contributing a guide for setting up second-screen on Sway.
 
 [Martin Sandsmark](https://github.com/sandsmark) also built [a VNC client for the reMarkable](https://github.com/sandsmark/revncable) which only depends on Qt.
 
